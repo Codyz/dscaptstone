@@ -1,0 +1,168 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Oct 17 18:57:24 2018
+
+@author: cao
+"""
+
+import scipy.io
+import os
+import numpy as np
+from numpy import arange
+from keras.models import Model
+from PIL import Image
+from sklearn.preprocessing import LabelEncoder
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Convolution2D, MaxPooling2D, Flatten,Input
+from keras.utils import np_utils
+from keras.layers.merge import concatenate
+
+def tranform_to_sampel(raw,new):
+    num = 0
+    for i in arange(0,s1,2):
+        if i+n1>=s1:
+            l1 = list(arange(i,s1))
+            l2 = list(arange(0,n1-len(l1)))
+            il = l1+l2
+        else:
+            il = list(arange(i,i+n1))
+        for j in range(0,s2,2):
+            if j+n2>=s2:
+                l1 = list(arange(j,s2))
+                l2 = list(arange(0,n2-len(l1)))
+                jl = l1+l2
+            else:
+                jl =list(arange(j,j+n2)) 
+                
+            new[num,:,:,:]= raw[il,:,:][:,jl,:]
+            if num == 0:
+                print(il,jl)            
+            num = num + 1
+
+    return new
+
+    
+    
+
+path = "/Users/cao/Desktop/DS fall/capstone/"
+
+os.chdir(path)
+
+mat = scipy.io.loadmat('output/tau23_xyz_T1.mat')
+
+tau11 = scipy.io.loadmat('output/tau11_xyz_T1.mat')['tau11']
+
+tau12 = scipy.io.loadmat('output/tau12_xyz_T1.mat')['tau12']
+
+tau13 = scipy.io.loadmat('output/tau13_xyz_T1.mat')['tau13']
+
+tau22 = scipy.io.loadmat('output/tau22_xyz_T1.mat')['tau22']
+
+
+tau23 = scipy.io.loadmat('output/tau23_xyz_T1.mat')['tau23']
+
+
+tau33 = scipy.io.loadmat('output/tau33_xyz_T1.mat')['tau33']
+
+v_F= scipy.io.loadmat('input/v_F_xyz_T1.mat')['v_F']
+u_F=scipy.io.loadmat('input/u_F_xyz_T1.mat')['u_F']
+w_F =scipy.io.loadmat('input/w_F_xyz_T1.mat')['w_F']
+
+s1,s2,s3 = tau11.shape
+n1 = 6
+n2 = 6
+n3 = s3
+
+num = 0
+for i in arange(0,s1,2):
+    for j in range(0,s2,2):
+        num = num +1
+
+ini = np.zeros((num,n1,n2,n3))
+#transform into small box
+vf = tranform_to_sampel(v_F,ini)
+uf = tranform_to_sampel(u_F,ini)
+wf = tranform_to_sampel(w_F,ini)
+
+y11 = tranform_to_sampel(tau11,ini)
+y12= tranform_to_sampel(tau12,ini)
+y13= tranform_to_sampel(tau13,ini)
+y22= tranform_to_sampel(tau22,ini)
+y23= tranform_to_sampel(tau23,ini)
+y33= tranform_to_sampel(tau33,ini)
+
+ytrain11 = np.reshape(y11, (y11.shape[0], -1))
+batch_size = 128
+nb_epoch = 200
+
+input_shape = (n1,n2,n3)
+kernel_size = (3, 3)
+pool_size = (2, 2)
+
+outsize = n1*n2*n3
+
+nb_filters = 16
+
+#first model
+visible1 = Input(shape=(vf.shape[1],vf.shape[2],vf.shape[3]))
+conv11 = Convolution2D(nb_filters,kernel_size, 
+                        border_mode='valid', activation='relu')(visible1)
+
+conv12 = Convolution2D(nb_filters,kernel_size, 
+                        border_mode='valid', activation='relu')(conv11)
+pool12 = MaxPooling2D(pool_size=pool_size)(conv12)
+flat1 = Flatten()(pool12)
+drop1 = Dropout(0.2)(flat1)
+#second:
+visible2 = Input(shape=(vf.shape[1],vf.shape[2],vf.shape[3]))
+conv21 = Convolution2D(nb_filters,kernel_size, 
+                        border_mode='valid', activation='relu')(visible2)
+
+conv22 = Convolution2D(nb_filters,kernel_size, 
+                        border_mode='valid', activation='relu')(conv21)
+pool22 = MaxPooling2D(pool_size=pool_size)(conv22)
+flat2 = Flatten()(pool22)
+drop2 = Dropout(0.2)(flat2)
+
+#third:
+visible3 = Input(shape=(vf.shape[1],vf.shape[2],vf.shape[3]))
+conv31 = Convolution2D(nb_filters,kernel_size, 
+                        border_mode='valid', activation='relu')(visible3)
+
+conv32 = Convolution2D(nb_filters,kernel_size, 
+                        border_mode='valid', activation='relu')(conv31)
+pool32 = MaxPooling2D(pool_size=pool_size)(conv32)
+flat3 = Flatten()(pool32)
+drop3 = Dropout(0.2)(flat3)
+# merge:
+merge = concatenate([drop1, drop2,drop3])
+
+hidden1 = Dense(512, activation='relu')(merge)
+hiddrop = Dropout(0.3)(hidden1)
+hidden2 = Dense(512, activation='relu')(hiddrop)
+output = Dense(outsize, activation='relu')(hidden2)
+model = Model(inputs=[visible1, visible2,visible3], outputs=output)
+# summarize layers
+print(model.summary())
+
+
+
+model.compile(loss='mean_squared_error',
+              optimizer='sgd',
+              metrics=['mse'])
+
+history = model.fit([uf,vf,wf], ytrain11, batch_size=batch_size, nb_epoch=nb_epoch, verbose=10)
+print(history.history['loss'])
+
+
+import matplotlib.pyplot as plt
+
+N = nb_epoch
+x =np.linspace(1, N,N)
+y = history.history['loss']
+ax = plt.axes()
+ax.plot(x, y)
+ax.set(xlim=(1,N), 
+       xlabel='epoch', ylabel='loss',
+       title='Training Loss')
