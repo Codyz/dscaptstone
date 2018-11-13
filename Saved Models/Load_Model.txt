@@ -1,0 +1,10 @@
+pip install h5py
+from tensorflow.keras.models import model_from_son
+
+json_file = open('model_tau_12 (1).json', 'r')
+loaded_model_json = json_file.read()
+json_file.close()
+loaded_model = model_from_json(loaded_model_json)#, custom_objects={'name': name})
+loaded_model.load_weights(“model_tau_12 (2).h5")
+loaded_model.compile(loss = 'mse', optimizer = tf.train.AdamOptimizer())
+pred = loaded_model.predict(x_test).flatten()
