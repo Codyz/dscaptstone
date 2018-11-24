@@ -20,5 +20,6 @@ Things to add:
 		- add distribution graph
 - Next steps:
 	1) train on Re15sh20-Coarse4, 8, 16 ad 24 as a combined dataset
-			   - add distribution graph
+		- add distribution graph
+	2) Adding time as a factor for Re15sh20-Coarse8 T1-T8
 	
