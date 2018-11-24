@@ -14,6 +14,9 @@ Things to add:
 		—> results in model x used to:
 			a) train on Re15sh20-Coarse8, predict on Re15sh20-Coarse4, 	
 			   Re15sh20-Coarse16, Re15sh20-Coarse24, Macro Channel-Coarse8
+			   - add distribution graph
 			b) train on Re15sh20-Coarse4, 8, 16 ad 24 as a combined dataset
+			   - add distribution graph
 	2) Model h_1, h_2, h_3, as a function of u,v,w,tke,theta,p
+		- add distribution graph
 	
