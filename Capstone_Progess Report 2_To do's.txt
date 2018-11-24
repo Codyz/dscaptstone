@@ -1,0 +1,17 @@
+Things to add:
+- Data Preprocessing
+- Modeling Overview:
+	1) Model tau_12, tau_13, tau_23 as a function of u,v,w,tke,theta,p
+		- cut all boxes to 75% in z-direction
+		- use max normalization
+		- standard normalization
+		- CNN vs DNN
+		- which inputs are most predictive (u,v,w) vs (u,v,w,the) vs (u,v,w,theta) 		  vs all those including pressure
+		- use correlation as a loss instead of mse
+		- test different box sizes
+		—> results in model x used to:
+			a) train on Re15sh20-Coarse8, predict on Re15sh20-Coarse4, 	
+			   Re15sh20-Coarse16, Re15sh20-Coarse24, Macro Channel-Coarse8
+			b) train on Re15sh20-Coarse4, 8, 16 ad 24 as a combined dataset
+	2) Model h_1, h_2, h_3, as a function of u,v,w,tke,theta,p
+	
