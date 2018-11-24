@@ -1,12 +1,14 @@
 Things to add:
 - Data Preprocessing
+	1) cut all boxes to 75% in z-direction
+	2) create boxes to predict tau
+	3) create one dataset out of u,v,w,tke,theta,p
 - Modeling Overview:
 	1) Model tau_12, tau_13, tau_23 as a function of u,v,w,tke,theta,p
-		- cut all boxes to 75% in z-direction
-		- use max normalization
-		- standard normalization
 		- CNN vs DNN
-		- which inputs are most predictive (u,v,w) vs (u,v,w,the) vs (u,v,w,theta) 		  vs all those including pressure
+		- use max normalization vs. standard normalization (especially important for tau_12)
+		- which inputs are most predictive (u,v,w) vs (u,v,w,tke) vs (u,v,w,theta) 
+		- adding pressure
 		- use correlation as a loss instead of mse
 		- test different box sizes
 		—> results in model x used to:
