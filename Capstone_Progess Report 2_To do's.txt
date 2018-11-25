@@ -7,9 +7,8 @@ Things to add:
 - Modeling Overview:
 	1) Model tau_12, tau_13, tau_23 as a function of u,v,w,tke,theta,p
 		- CNN vs DNN
-		- use max normalization vs. standard normalization (especially important for tau_12)
-		- which inputs are most predictive (u,v,w) vs (u,v,w,tke) vs (u,v,w,theta) 
-		- adding pressure
+		- use max normalization vs. standard normalization (especially important for tau_12) --> results in DNN/ipynb
+		- which inputs are most predictive (u,v,w) vs (u,v,w,tke) vs (u,v,w,theta) vs (u,v,w,p) --> results in DNN/ipynb
 		- use correlation as a loss instead of mse
 		- test different box sizes
 		—> results in model x used to:
