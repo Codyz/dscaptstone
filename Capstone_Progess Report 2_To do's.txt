@@ -9,7 +9,7 @@ Things to add:
 		- CNN vs DNN
 		- use max normalization vs. standard normalization (especially important for tau_12) --> results in DNN/ipynb
 		- which inputs are most predictive (u,v,w) vs (u,v,w,tke) vs (u,v,w,theta) vs (u,v,w,p) --> results in DNN/ipynb
-		- use correlation as a loss instead of mse
+		- use correlation as a loss instead of mse --> results in DNN/ipynb
 		- test different box sizes
 		—> results in model x used to:
 			a) train on Re15sh20-Coarse8, predict on Re15sh20-Coarse4, 	
