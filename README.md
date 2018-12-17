@@ -2,7 +2,7 @@
 
 ## How to navigate this repositroy:
 
-------------
+
     │
     ├── Archive
     |    |-- Contains outdated, experimental notebooks
@@ -22,6 +22,6 @@
     |
     ├── final_trained_model.h5, final_trained_model.json
     |    |--Trained Models
---------
+
 
 <p>&tau;</p>
