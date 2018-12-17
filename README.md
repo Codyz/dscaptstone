@@ -1,6 +1,6 @@
 ### Modeling small-scale turbulence in Large Eddy Simulations using Deep Learning
 
-## How to navigate this repositroy:
+#### How to navigate this repository:
 
 ------------------
       │
@@ -52,6 +52,23 @@
       |              |         |-- Contains predictions of single-output models for heat flux
       |              |         |-- Inputs: base input, differing conditions and differing conditions and time steps
       
-      
+#### Problem Statement:
+Turbulence modeling remains one of the biggest challenges in engineering today, and has impacts ranging from aerodynamics to climate modeling. A plane cannot fly without jet propulsion and your car consumes the amount of fuel it does partly due to its aerodynamic properties. 
+
+Given the difficulty and high cost of observing turbulence in a natural environment, most turbulence models include some form of simulation. Among the most popular methods are Direct Numerical Simulations (DNS), and Large-Eddy Simulations, first proposed in 1963 by Joseph Smagorinsky and first explored in 1970 by Deardorff.
+
+The governing equations of these types of simulations are the Navier-Stokes equations, which represent Newton's second law applied to the x, y and z-direction of Newtonian fluids in motion:
+
+\begin{equation}
+\scriptscriptstyle \rho \left( \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} + w \frac{\partial u}{\partial z}\right) = \rho g_{x} - \frac{\partial P}{\partial x} + \mu \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial 
+z^2}\right)
+\end{equation}
+\begin{equation}
+\scriptscriptstyle \rho \left( \frac{\partial v}{\partial t} + u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} + w \frac{\partial v}{\partial z}\right) = \rho g_{y} - \frac{\partial P}{\partial y} + \mu \left( \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} + \frac{\partial^2 v}{\partial z^2}\right)
+\end{equation}
+\begin{equation}
+\scriptscriptstyle \rho \left( \frac{\partial w}{\partial t} + u \frac{\partial w}{\partial x} + v \frac{\partial w}{\partial y} + w \frac{\partial w}{\partial z}\right) = \rho g_{z} - \frac{\partial P}{\partial z} + \mu \left( \frac{\partial^2 w}{\partial x^2} + \frac{\partial^2 w}{\partial y^2} + \frac{\partial^2 w}{\partial z^2}\right)
+\end{equation}
+
 
 
