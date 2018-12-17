@@ -12,7 +12,7 @@
     |
     ├── Saved Models
     |    |-- Multi Output
-    |         |-- Contains model weights and architectures for our multi-output models, which predict all &tau and h simultaneously   
+    |         |-- Contains model weights and architectures for our multi-output models, which predict all <p>&tau;</p> and h simultaneously   
     |
     ├──  model_training_final.ipynb
     |    |--This notebook contains code to train the model that we will finally use. It also preprocesses images.
