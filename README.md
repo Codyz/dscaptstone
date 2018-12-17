@@ -15,9 +15,11 @@
       |         |-- Contains multi-output models, which predict all sheer stresses and heat flux simultaneously
       |    |-- Sinle Output
       |         |-- Base
-      |              |-- Contains multi-input sinlge-output models for sheer stress and heat flux with differing initial conditions
+      |              |-- Contains sinlge-output models for sheer stress and heat flux
       |         |-- Combined
-      |              |-- Contains single-output models
+      |              |-- Contains mutli-input single-output models including differing initial conditions
+      |         |-- Combined_Time_Dependencies
+      |              |-- Contains mutli-input single-output models including differing initial conditions at different times
       |
       ├──  model_training_final.ipynb
       |    |--This notebook contains code to train the model that we will finally use. It also preprocesses images.
