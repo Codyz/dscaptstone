@@ -1,5 +1,6 @@
 
 ### Model Overview:
+- All models are single-output, one for each tau and sheer stress
 - Capstone_DNN_HeatFinal_combined_sets.ipynb: trained on Re1243Fr20-coarse8-T1 and Re309Fr2-coarse8-T1
 - Capstone_DNN_HeatFinal_combined_sets_time.ipynb: trained on Re1243Fr20-coarse8 and Re309Fr2-coarse8 at times T1 and T2
 - Capstone_DNN_HeatFinal.iypnb: trained on Re1243Fr20-coarse8-T1
