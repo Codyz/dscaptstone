@@ -21,14 +21,17 @@
       |         |-- Combined_Time_Dependencies
       |              |-- Contains mutli-input single-output models with differing initial conditions and time steps
       |
-      ├──  model_training_final.ipynb
-      |    |--This notebook contains code to train the model that we will finally use. It also preprocesses images.
-      |
-      ├── lane_keep_testing_final.ipynb
-      |    |--This notebook uses a pretrained model( .h5 and .json) files to make online predictions on the GoPiGo.
-      |
-      ├── final_trained_model.h5, final_trained_model.json
-      |    |--Trained Models
-
+      ├── Code
+      |    |-- CNN
+      |         |-- Contains experimental notebooks with Convolutional Neural Networks
+      |    |-- LSTM
+      |         |-- Contains experimental notebook with single-output LSTM for sheer stress
+      |    |-- DNN
+      |         |-- Final Models
+      |              |-- Multi Output
+      |                   |-- Contains multi-output DNN models, which predict all sheer stresses and heat flux
+      |                   |-- Contains models for base input, differing conditions and differing conditions and time steps
+      |              |-- Single Output
+      |                   |--
 
 
