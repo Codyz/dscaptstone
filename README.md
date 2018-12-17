@@ -15,7 +15,7 @@
       |         |-- Contains multi-output models, which predict all sheer stresses and heat flux simultaneously
       |    |-- Sinle Output
       |         |-- Base
-      |              |-- Contains multi-input sinlge-output models for each sheer stress and heat flux using differing initial conditions
+      |              |-- Contains multi-input sinlge-output models for sheer stress and heat flux with differing initial conditions
       |         |-- Combined
       |              |-- Contains single-output models
       |
