@@ -12,7 +12,12 @@
       |
       ├── Saved Models
       |    |-- Multi Output
-      |         |-- Contains model weights and architectures for our multi-output models, which predict all sheer stresses and heat fluxsimultaneously
+      |         |-- Contains multi-output models, which predict all sheer stresses and heat flux simultaneously
+      |    |-- Sinle Output
+      |         |-- Base
+      |              |-- Contains multi-input sinlge-output models for each sheer stress and heat flux using differing initial conditions
+      |         |-- Combined
+      |              |-- Contains single-output models
       |
       ├──  model_training_final.ipynb
       |    |--This notebook contains code to train the model that we will finally use. It also preprocesses images.
