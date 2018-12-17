@@ -2,7 +2,7 @@
 
 ## How to navigate this repositroy:
 
-
+------------------
       │
       ├── Archive
       |    |-- Contains outdated, experimental notebooks
@@ -12,46 +12,45 @@
       |
       ├── Saved Models
       |    |-- Multi Output
-      |         |-- Contains multi-output models, which predict all sheer stresses and heat flux simultaneously
+      |    |    |-- Contains multi-output models, which predict all sheer stresses and heat flux simultaneously
       |    |-- Sinle Output
       |         |-- Base
-      |              |-- Contains sinlge-output models for sheer stress and heat flux
+      |         |    |-- Contains sinlge-output models for sheer stress and heat flux
       |         |-- Combined
-      |              |-- Contains mutli-input single-output models with differing initial conditions
+      |         |    |-- Contains mutli-input single-output models with differing initial conditions
       |         |-- Combined_Time_Dependencies
       |              |-- Contains mutli-input single-output models with differing initial conditions and time steps
       |
       ├── Code
       |    |-- CNN
-      |         |-- Contains experimental notebooks with Convolutional Neural Networks
+      |    |    |-- Contains experimental notebooks with Convolutional Neural Networks
       |    |-- LSTM
-      |         |-- Contains experimental notebook with single-output LSTM for sheer stress
+      |    |    |-- Contains experimental notebook with single-output LSTM for sheer stress
       |    |-- DNN
       |         |-- Final Models
-      |              |-- Multi Output
-      |                   |-- Contains multi-output DNN models, which predict all sheer stresses and heat flux
-      |                   |-- Inputs: base input, differing conditions and differing conditions and time steps
-      |              |-- Single Output
-      |                   |-- Contains single-output DNN models for heat flux and sheer stresses
-      |                   |-- Inputs: base input, differing conditions and differing conditions and time steps
+      |         |    |-- Multi Output
+      |         |         |-- Contains multi-output DNN models, which predict all sheer stresses and heat flux
+      |         |         |-- Inputs: base input, differing conditions and differing conditions and time steps
+      |         |    |-- Single Output
+      |         |         |-- Contains single-output DNN models for heat flux and sheer stresses
+      |         |         |-- Inputs: base input, differing conditions and differing conditions and time steps
       |         |-- Hyperparameter Checks
-      |              |-- Includes checks for box size, input data, loss function and data scaling technique
+      |         |    |-- Includes checks for box size, input data, loss function and data scaling technique
       |         |-- Capstone_DNN_Correlation_by_layer.ipynb
-      |              |-- Explores the true vs. pred. correlation evolution for each layer along the z-axis
+      |         |    |-- Explores the true vs. pred. correlation evolution for each layer along the z-axis
       |         |-- Capstone_DNN_TauPredictions_by_layer.ipynb
-      |              |-- Explores true vs. pred. distributions for several layers along the z-axis
+      |         |    |-- Explores true vs. pred. distributions for several layers along the z-axis
       |         |-- Predictions
       |              |-- Multi Output
-      |                   |-- Contains predictions of multi-output models for heat flux and sheer stress
-      |                   |-- Inputs: base input, differing conditions and differing conditions and time steps
+      |              |    |-- Contains predictions of multi-output models for heat flux and sheer stress
+      |              |    |-- Inputs: base input, differing conditions and differing conditions and time steps
       |              |-- Single Output
-      |                   |-- Taus
-      |                        |-- Contains predictions of single-output models for sheer stresses
-      |                        |-- Inputs: base input, differing conditions and differing conditions and time steps
-      |                   |-- Heat
-      |                        |-- Contains predictions of single-output models for heat flux
-      |                        |-- Inputs: base input, differing conditions and differing conditions and time steps
-      
+      |              |    |-- Taus
+      |              |         |-- Contains predictions of single-output models for sheer stresses
+      |              |         |-- Inputs: base input, differing conditions and differing conditions and time steps
+      |              |    |-- Heat
+      |              |         |-- Contains predictions of single-output models for heat flux
+      |              |         |-- Inputs: base input, differing conditions and differing conditions and time steps
       
       
 
