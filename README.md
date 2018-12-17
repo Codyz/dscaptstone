@@ -24,4 +24,4 @@
     |    |--Trained Models
 --------
 
-\tau
+\[\tau\]
