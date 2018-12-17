@@ -59,6 +59,6 @@ Given the difficulty and high cost of observing turbulence in a natural environm
 The governing equations of these types of simulations are the Navier-Stokes equations, which represent Newton's second law applied to the x, y and z-direction of Newtonian fluids in motion:
 
 <p align="center">
-<img src="Images/Navier_Stokes.png" style="display: block; margin: auto;" height="150" width="375" />
+<img src="Images/Navier_Stokes.png" style="display: block; margin: auto;" height="125" width="375" />
 
 
