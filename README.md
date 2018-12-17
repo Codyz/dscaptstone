@@ -24,5 +24,5 @@
     |    |--Trained Models
 --------
 
-$$ \tau $$
+$$\tau$$
 
