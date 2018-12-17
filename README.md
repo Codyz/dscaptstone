@@ -59,20 +59,7 @@ Given the difficulty and high cost of observing turbulence in a natural environm
 
 The governing equations of these types of simulations are the Navier-Stokes equations, which represent Newton's second law applied to the x, y and z-direction of Newtonian fluids in motion:
 
-<div lang="latex">
-\begin{equation}
-\scriptscriptstyle \rho \left( \frac{\partial u}{\partial t} + u \frac{\partial u}{\partial x} + v \frac{\partial u}{\partial y} + w \frac{\partial u}{\partial z}\right) = \rho g_{x} - \frac{\partial P}{\partial x} + \mu \left( \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial 
-z^2}\right)
-\end{equation}
-\begin{equation}
-\scriptscriptstyle \rho \left( \frac{\partial v}{\partial t} + u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} + w \frac{\partial v}{\partial z}\right) = \rho g_{y} - \frac{\partial P}{\partial y} + \mu \left( \frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} + \frac{\partial^2 v}{\partial z^2}\right)
-\end{equation}
-\begin{equation}
-\scriptscriptstyle \rho \left( \frac{\partial w}{\partial t} + u \frac{\partial w}{\partial x} + v \frac{\partial w}{\partial y} + w \frac{\partial w}{\partial z}\right) = \rho g_{z} - \frac{\partial P}{\partial z} + \mu \left( \frac{\partial^2 w}{\partial x^2} + \frac{\partial^2 w}{\partial y^2} + \frac{\partial^2 w}{\partial z^2}\right)
-\end{equation}
-</div>
-
-
-
+<p align="center">
+<img src="Images/Navier_Stokes.png" style="display: block; margin: auto;" height="300" width="375" />
 
 
