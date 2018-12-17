@@ -30,8 +30,29 @@
       |         |-- Final Models
       |              |-- Multi Output
       |                   |-- Contains multi-output DNN models, which predict all sheer stresses and heat flux
-      |                   |-- Contains models for base input, differing conditions and differing conditions and time steps
+      |                   |-- Inputs: base input, differing conditions and differing conditions and time steps
       |              |-- Single Output
-      |                   |--
+      |                   |-- Contains single-output DNN models for heat flux and sheer stresses
+      |                   |-- Inputs: base input, differing conditions and differing conditions and time steps
+      |         |-- Hyperparameter Checks
+      |              |-- Includes checks for box size, input data, loss function and data scaling technique
+      |         |-- Capstone_DNN_Correlation_by_layer.ipynb
+      |              |-- Explores the true vs. pred. correlation evolution for each layer along the z-axis
+      |         |-- Capstone_DNN_TauPredictions_by_layer.ipynb
+      |              |-- Explores true vs. pred. distributions for several layers along the z-axis
+      |         |-- Predictions
+      |              |-- Multi Output
+      |                   |-- Contains predictions of multi-output models for heat flux and sheer stress
+      |                   |-- Inputs: base input, differing conditions and differing conditions and time steps
+      |              |-- Single Output
+      |                   |-- Taus
+      |                        |-- Contains predictions of single-output models for sheer stresses
+      |                        |-- Inputs: base input, differing conditions and differing conditions and time steps
+      |                   |-- Heat
+      |                        |-- Contains predictions of single-output models for heat flux
+      |                        |-- Inputs: base input, differing conditions and differing conditions and time steps
+      
+      
+      
 
 
