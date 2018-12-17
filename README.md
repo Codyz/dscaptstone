@@ -19,7 +19,7 @@
       |         |-- Combined
       |              |-- Contains mutli-input single-output models including differing initial conditions
       |         |-- Combined_Time_Dependencies
-      |              |-- Contains mutli-input single-output models including differing initial conditions at different times
+      |              |-- Contains mutli-input single-output models including differing initial conditions and time steps
       |
       ├──  model_training_final.ipynb
       |    |--This notebook contains code to train the model that we will finally use. It also preprocesses images.
