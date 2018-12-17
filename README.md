@@ -17,9 +17,9 @@
       |         |-- Base
       |              |-- Contains sinlge-output models for sheer stress and heat flux
       |         |-- Combined
-      |              |-- Contains mutli-input single-output models including differing initial conditions
+      |              |-- Contains mutli-input single-output models with differing initial conditions
       |         |-- Combined_Time_Dependencies
-      |              |-- Contains mutli-input single-output models including differing initial conditions and time steps
+      |              |-- Contains mutli-input single-output models with differing initial conditions and time steps
       |
       ├──  model_training_final.ipynb
       |    |--This notebook contains code to train the model that we will finally use. It also preprocesses images.
