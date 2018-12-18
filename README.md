@@ -24,12 +24,13 @@ This project was part of ENGI 4800 - Data Science Capstone at Columbia.
 
 #### Data Overview
 
+Our datasets consist of 3-dimensional spatial cubes and  were generated using a high resolution DNS with differing initial conditions over a small spatial area. The sub-grid scale DNS output was then used to (1) calculate the model inputs via averaging over regions of differing sizes and (2) calculate the model outputs. With the DNS output being on a sub-grid scale, the spatial averaging was done in order to achieve a good proxy for the generalized input to the model, which will be on a resolved scale. Our goal was then to identify a function that maps input to output, since the true input will be on a resolved scale and will no longer allow us to calculate the output directly (see Figure a below).
+
 <p align="center">
 <img src="Images/Data_Overview.png" style="display: block; margin: auto;" height="275" width="800" />
 
-Our datasets consist of 3-dimensional spatial cubes and  were generated using a high resolution DNS with differing initial conditions over a small spatial area. The sub-grid scale DNS output was then used to (1) calculate the model inputs via averaging over regions of differing sizes and (2) calculate the model outputs. With the DNS output being on a sub-grid scale, the spatial averaging was done in order to achieve a good proxy for the generalized input to the model, which will be on a resolved scale. Our goal was then to identify a function that maps input to output, since the true input will be on a resolved scale and will no longer allow us to calculate the output directly (see Fig. 1-a).
 
-A summary of our dataset categories can be found in Fig. 1-b. These categories can be understood as follows:
+A summary of our dataset categories can be found in Figure b above. These categories can be understood as follows:
 
 <b>Layer 1: DNS Initial Conditions.</b> Each node is labeled Re-x-Fr-y, where x is the Reynolds Number and y is the Froude Number.
 * The Reynolds Number is a dimensionless measure of turbulence. The higher the number the more turbulent the flow.
@@ -41,20 +42,16 @@ Loosely speaking, the Froude number quantifies the addition of heat conduction f
 
 <b>Layer 3 (not pictured): Datasets.</b> Within each Re-x-Fr-y coarse-z category, we have one sample of each of the following 3-D boxes for each time step:
 
-\vspace{0.1cm}
-\begin{tabular}{lll}\toprule
-Variable 	& Type    & Description of Box Entries \\\colrule
- u 			& Input   & velocity in the x-direction \\
- v 			& Input   & velocity in the y-direction \\
- w 			& Input   & velocity in the z-direction \\
- tke 		& Input   & total kinetic energy        \\
- $\theta$ 	& Input   & temperature \\
- p 			& Input	  & pressure	\\\colrule
- $h_{xyz}$ 	& Output  & heat flux\\
- $\tau^{\Delta}_{xyz}$ 	& Output & stress due to low-pass filtering\\
-\hline \hline
-\end{tabular}
-\vspace{0.2cm}
+| Variable       | Type       | Description                                     |
+| -------------  |:----------:| -----------------------------------------------:|
+| u              | Input      | velocity of a point (x,y,z) in the x-direction  |
+| v              | Input      | velocity of a point (x,y,z) in the y-direction  |
+| w              | Input      | velocity of a point (x,y,z) in the z-direction  |
+| tke            | Input      | total kinetic enegery at a point (x,y,z)        |
+| <bdi>&theta;</bdi> | Input  | temperature at a point (x,y,z)                  |
+| p              | Input      | pressure at a point (x,y,z)                     |
+| h<sub>xyz</sub>| Output     | heat flux                                       |
+| <bdi>&tau;<sub>xyz</sub><sup>&Delta;</sup>| Output | sheer stress due to low-pass filtering |
 
 Due to the spatial averaging of the DNS output over regions of differing size, the four coarse-z data categories have input and output cubes of different sizes. They are as follows:
 
