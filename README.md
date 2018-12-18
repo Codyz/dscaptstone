@@ -24,6 +24,9 @@ This project was part of ENGI 4800 - Data Science Capstone at Columbia.
 
 #### Data Overview
 
+<p align="center">
+<img src="Images/Data_Overview.png" style="display: block; margin: auto;" height="150" width="250" />
+
 Our datasets consist of 3-dimensional spatial cubes and  were generated using a high resolution DNS with differing initial conditions over a small spatial area. The sub-grid scale DNS output was then used to (1) calculate the model inputs via averaging over regions of differing sizes and (2) calculate the model outputs. With the DNS output being on a sub-grid scale, the spatial averaging was done in order to achieve a good proxy for the generalized input to the model, which will be on a resolved scale. Our goal was then to identify a function that maps input to output, since the true input will be on a resolved scale and will no longer allow us to calculate the output directly (see Fig. 1-a).
 
 A summary of our dataset categories can be found in Fig. 1-b. These categories can be understood as follows:
@@ -34,9 +37,9 @@ A summary of our dataset categories can be found in Fig. 1-b. These categories c
 
 Loosely speaking, the Froude number quantifies the addition of heat conduction from underneath as an initial condition. Such heat conduction may, for example, model stratified turbulence in the upper troposphere (i.e. the earth's lowest atmospheric layer). The last modeling setup (Re546) does not include any conductive heating and hence a Froude Number is not necessary. Note that the selected Reynolds and Froude Numbers are standard practice in turbulence modeling and are set by the researchers ([3],[4])
 
-<b>Layer 2: Averaging Range.</b> For each Reynolds Number - Froude Number combination, we have different categories identified by coarse-z, where z is either 4, 8, 16 or 24. These numbers represent the grid-size over which the DNS outputs are averaged. As mentioned above, the DNS is averaged over a range of size (2z+1)x(2z+1)x(2z+1) in order to better mimic the generalized input to the model later on. Please note that for several data categories, we have data for 8 different time steps, T1 - T8.\\
+<b>Layer 2: Averaging Range.</b> For each Reynolds Number - Froude Number combination, we have different categories identified by coarse-z, where z is either 4, 8, 16 or 24. These numbers represent the grid-size over which the DNS outputs are averaged. As mentioned above, the DNS is averaged over a range of size (2z+1)x(2z+1)x(2z+1) in order to better mimic the generalized input to the model later on. Please note that for several data categories, we have data for 8 different time steps, T1 - T8.
 
-$\textbf{Layer 3 (not pictured): Datasets.}$ Within each Re-x-Fr-y coarse-z category, we have one sample of each of the following 3-D boxes for each time step:\\
+<b>Layer 3 (not pictured): Datasets.</b> Within each Re-x-Fr-y coarse-z category, we have one sample of each of the following 3-D boxes for each time step:
 
 \vspace{0.1cm}
 \begin{tabular}{lll}\toprule
@@ -52,22 +55,6 @@ Variable 	& Type    & Description of Box Entries \\\colrule
 \hline \hline
 \end{tabular}
 \vspace{0.2cm}
-
-\begin{figure*}[ht]
-\centering
-\subfloat[$u_{xyz} (Re1243Fr20-coarse8)$]{\includegraphics[height=1.5in,width=0.3\textwidth]{Figure_u.png}}
-\subfloat[$v_{xyz} (Re1243Fr20-coarse8)$]{\includegraphics[height=1.5in,width=0.3\textwidth]{Figure_v.png}}
-\subfloat[$w_{xyz} (Re1243Fr20-coarse8)$]{\includegraphics[height=1.5in,width=0.3\textwidth]{Figure_w.png}}
-\newline
-\subfloat[Input distributions for differing initial conditions]
-{\includegraphics[height=1.5in,width=1\textwidth]{Inputs.png}}
-\newline
-\subfloat[Outputs (Re1243Fr20-coarse8)]
-{\includegraphics[height=1.5in,width=0.3\textwidth]{boxplot_tau.png}}
-\subfloat[Inputs (Re1243Fr20-coarse8)]
-{\includegraphics[height=1.5in,width=0.3\textwidth]{boxplot_uvw.png}}
-\caption{(a) - (c) Select input matrices. (d) Distribution of u, v and w for all 4 initial conditions (averaging range coarse8). (e) - (f) boxplots of select inputs and all 6 sheer stresses}
-\end{figure*}
 
 Due to the spatial averaging of the DNS output over regions of differing size, the four coarse-z data categories have input and output cubes of different sizes. They are as follows:
 
