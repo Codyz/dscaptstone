@@ -43,7 +43,7 @@ Loosely speaking, the Froude number quantifies the addition of heat conduction f
 <b>Layer 3 (not pictured): Datasets.</b> Within each Re-x-Fr-y coarse-z category, we have one sample of each of the following 3-D boxes for each time step:
 
 | Variable       | Type       | Description                                     |
-| -------------  |:----------:| -----------------------------------------------:|
+| -------------  | ---------- | ----------------------------------------------- |
 | u              | Input      | velocity of a point (x,y,z) in the x-direction  |
 | v              | Input      | velocity of a point (x,y,z) in the y-direction  |
 | w              | Input      | velocity of a point (x,y,z) in the z-direction  |
