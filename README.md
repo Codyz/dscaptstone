@@ -34,7 +34,7 @@ A summary of our dataset categories can be found in Figure b above. These catego
 
 <b>Layer 1: DNS Initial Conditions.</b> Each node is labeled Re-x-Fr-y, where x is the Reynolds Number and y is the Froude Number.
 * The Reynolds Number is a dimensionless measure of turbulence. The higher the number the more turbulent the flow.
-* The Froude Number is a dimensionless, relative measure of forces, defined as the ratio of inertial forces (due to particles of fluid resisting change in momentum) to external fields (which is often just gravity)
+* The Froude Number is a dimensionless, relative measure of forces, defined as the ratio of inertial forces to external fields
 
 Loosely speaking, the Froude number quantifies the addition of heat conduction from underneath as an initial condition. Such heat conduction may, for example, model stratified turbulence in the upper troposphere (i.e. the earth's lowest atmospheric layer). The last modeling setup (Re546) does not include any conductive heating and hence a Froude Number is not necessary. Note that the selected Reynolds and Froude Numbers are standard practice in turbulence modeling and are set by the researchers ([3],[4])
 
