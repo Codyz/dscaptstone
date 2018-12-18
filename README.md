@@ -1,7 +1,7 @@
 ### Modeling small-scale turbulence in Large Eddy Simulations using Deep Learning
       
 #### Problem Statement:
-Turbulence modeling remains one of the biggest challenges in engineering today, and has impacts ranging from aerodynamics to climate modeling. A plane cannot fly without jet propulsion and your car consumes the amount of fuel it does partly due to its aerodynamic properties. 
+Turbulence modeling remains one of the biggest challenges in engineering today, and has impacts ranging from aerodynamics to climate modeling. A plane cannot fly without jet propulsion and your car consumes the amount of fuel it does partly due to its aerodynamic properties. The image below shows fluid turbulence including several eddys (swirls).
 
 <p align="center">
 <img src="Images/Turbulence.png" style="display: block; margin: auto;" height="150" width="250" />
@@ -13,7 +13,10 @@ The governing equations of these types of simulations are the Navier-Stokes equa
 <p align="center">
 <img src="Images/Navier_Stokes.png" style="display: block; margin: auto;" height="125" width="375" />
 
+Both simulation-based approaches mentioned above use these equations as follows:
 
+* Direct Numerical Simulations (DNS) analytically solve the Navier-Stokes equation across all temporal and spatial scales. The main issue arises because current computing power is not sufficient to conduct a DNS on large scales.
+* Large Eddy Simulations (LES) are more computationally efficient, by attempting to solve the Navier-Stokes equations on large scales only and subsequently  model the turbulence behavior on smaller scales. This is achieved via low-passed spacial filtering (i.e. a convolution kernel $G_{\Delta}(x)$ of size $\Delta$ is applied), a method used to separate large (resolved scale) and small (sub-grid scale) eddys. Applying the kernel will remove sub-grid scale information and transforms the Navier-Stokes equations by adding a stress term $\tau^{\Delta}$ that needs to be modeled. 
 
 #### How to navigate this repository:
 
