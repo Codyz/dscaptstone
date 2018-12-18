@@ -69,6 +69,5 @@ Both simulation-based approaches mentioned above use these equations as follows:
       |              |         |-- Contains predictions of single-output models for heat flux
       |              |         |-- Inputs: base input, differing conditions and differing conditions and time steps
 --------------------
-[1] J. Smagorinsky. General circulation experiments with the primitive equation. i. the basic experiment. Monthly Weather Review, 91, 1963.
-
+[1] J. Smagorinsky. General circulation experiments with the primitive equation. i. the basic experiment. Monthly Weather Review, 91, 1963.\\
 [2] J. B. Deardorff. A numerical study of three-dimensional turbulent channel flow at large reynolds numbers. J. Fluid Mech., 41, 05 1970.
