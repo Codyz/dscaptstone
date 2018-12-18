@@ -16,7 +16,7 @@ The governing equations of these types of simulations are the Navier-Stokes equa
 Both simulation-based approaches mentioned above use these equations as follows:
 
 * Direct Numerical Simulations (DNS) analytically solve the Navier-Stokes equation across all temporal and spatial scales. The main issue arises because current computing power is not sufficient to conduct a DNS on large scales.
-* Large Eddy Simulations (LES) are more computationally efficient, by attempting to solve the Navier-Stokes equations on large scales only and subsequently  model the turbulence behavior on smaller scales. This is achieved via low-passed spacial filtering (i.e. a convolution kernel <bdi>G_<sub>&Delta</sub>(x)</bdi> of size <bdi>&Delta</bdi> is applied), a method used to separate large (resolved scale) and small (sub-grid scale) eddys. Applying the kernel will remove sub-grid scale information and transforms the Navier-Stokes equations by adding a stress term <bdi>&tau<sup>&Delta</sup></bdi> that needs to be modeled. 
+* Large Eddy Simulations (LES) are more computationally efficient, by attempting to solve the Navier-Stokes equations on large scales only and subsequently  model the turbulence behavior on smaller scales. This is achieved via low-passed spacial filtering (i.e. a convolution kernel <bdi>G_<sub>&Delta;</sub>(x)</bdi> of size <bdi>&Delta;</bdi> is applied), a method used to separate large (resolved scale) and small (sub-grid scale) eddys. Applying the kernel will remove sub-grid scale information and transforms the Navier-Stokes equations by adding a stress term <bdi>&tau;<sup>&Delta;</sup></bdi> that needs to be modeled. 
 
 #### How to navigate this repository:
 
