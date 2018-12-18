@@ -4,7 +4,7 @@
 Turbulence modeling remains one of the biggest challenges in engineering today, and has impacts ranging from aerodynamics to climate modeling. A plane cannot fly without jet propulsion and your car consumes the amount of fuel it does partly due to its aerodynamic properties. 
 
 <p align="center">
-<img src="Images/Turbulence.png" style="display: block; margin: auto;" height="250" width="375" />
+<img src="Images/Turbulence.png" style="display: block; margin: auto;" height="200" width="300" />
 
 Given the difficulty and high cost of observing turbulence in a natural environment, most turbulence models include some form of simulation. Among the most popular methods are Direct Numerical Simulations (DNS), and Large-Eddy Simulations, first proposed in 1963 by Joseph Smagorinsky [1] and first explored in 1970 by Deardorff [2].
 
