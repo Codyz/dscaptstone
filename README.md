@@ -62,6 +62,17 @@ Due to the spatial averaging of the DNS output over regions of differing size, t
 | 16           | (33x33x33)   | (71, 46, 36)         |
 | 24           | (49x49x49)   | (46, 30, 23)         |
 
+#### Modeling Overview
+
+We have tried different types of deep learning models: DNN (base model), CNN (to capture spatial dependencies) and LSTM (to model time-dependencies). Initially, we trained independent models for each sheer stress and heat flux. Comparing the results for each model, we chose the DNN as our final model, due to its simplicity and accuracy. As for the training process, we have considered different input / output combinations, in order to determine which would be most generalizable. 
+
+* Train on Re1243Fr20-coarse8 (base model)
+* Train on Re1243Fr20-coarse4, Re1243Fr20-coarse8, Re1243Fr20-coarse16 and Re1243Fr20-coarse24 to isolate the effects of the averaging range
+* Train on Re309Fr2-coarse8 and Re1243Fr20-coarse8 to isolate the effects of the initial conditions. Here Re309Fr2 shows the least amount of turbulence while Re1243Fr20 shows the most turbulence among all our datasets
+* Train on Re309Fr2-coarse8 and Re1243Fr20-coarse8, both at time steps T1 and T2 to isolate the effects of temporal information
+
+For a full overview of our modeling, please visit the [DNN folder](https://github.com/Codyz/dscaptstone/tree/master/Code/DNN).
+
 #### How to navigate this repository:
 
       │
@@ -116,5 +127,5 @@ Due to the spatial averaging of the DNS output over regions of differing size, t
 --------------------------------
 <sub>[1] J. Smagorinsky. General circulation experiments with the primitive equation. i. the basic experiment. Monthly Weather Review, 91, 1963.<br/></sub>
 <sub>[2] J. B. Deardorff. A numerical study of three-dimensional turbulent channel flow at large reynolds numbers. J. Fluid Mech., 41, 05 1970.<br/></sub>
-<sub>[3]Q. Li, P. Gentine, J. P. Mellado, and K. A. McColl. Implications of nonlocal transport and conditionally averaged statistics on moninobukhov similarity theory and townsends attached eddy hypothesis. Journal of the atmospheric sciences, 75, 10 2018.<br/></sub>
+<sub>[3] Q. Li, P. Gentine, J. P. Mellado, and K. A. McColl. Implications of nonlocal transport and conditionally averaged statistics on moninobukhov similarity theory and townsends attached eddy hypothesis. Journal of the atmospheric sciences, 75, 10 2018.<br/></sub>
 <sub>[4] M. Giometto, A. Lozano-Duran, P. Moin, and G. I. Park. Three-dimensional transient channel flow at moderate reynolds numbers: Analysis and wall modeling. 01 2017.<br/></sub>
