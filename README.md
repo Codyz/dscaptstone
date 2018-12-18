@@ -134,7 +134,7 @@ Coarse 	& Grid Size & Input / Output Size \\\colrule
       |              |         |-- Contains predictions of single-output models for heat flux
       |              |         |-- Inputs: base input, differing conditions and differing conditions and time steps
 --------------------
-<bdi style="font-size:10">[1] J. Smagorinsky. General circulation experiments with the primitive equation. i. the basic experiment. Monthly Weather Review, 91, 1963.<br/></bdi>
-<bdi style="font-size:10">[2] J. B. Deardorff. A numerical study of three-dimensional turbulent channel flow at large reynolds numbers. J. Fluid Mech., 41, 05 1970.<br/></bdi>
-<bdi style="font-size:10">[3]Q. Li, P. Gentine, J. P. Mellado, and K. A. McColl. Implications of nonlocal transport and conditionally averaged statistics on moninobukhov similarity theory and townsends attached eddy hypothesis. Journal of the atmospheric sciences, 75, 10 2018.<br/></bdi>
-<bdi style="font-size:10">[4] M. Giometto, A. Lozano-Duran, P. Moin, and G. I. Park. Three-dimensional transient channel flow at moderate reynolds numbers: Analysis and wall modeling. 01 2017.<br/></bdi>
+<bdi style="font-size:8">[1] J. Smagorinsky. General circulation experiments with the primitive equation. i. the basic experiment. Monthly Weather Review, 91, 1963.<br/></bdi>
+<bdi style="font-size:8">[2] J. B. Deardorff. A numerical study of three-dimensional turbulent channel flow at large reynolds numbers. J. Fluid Mech., 41, 05 1970.<br/></bdi>
+<bdi style="font-size:8">[3]Q. Li, P. Gentine, J. P. Mellado, and K. A. McColl. Implications of nonlocal transport and conditionally averaged statistics on moninobukhov similarity theory and townsends attached eddy hypothesis. Journal of the atmospheric sciences, 75, 10 2018.<br/></bdi>
+<bdi style="font-size:8">[4] M. Giometto, A. Lozano-Duran, P. Moin, and G. I. Park. Three-dimensional transient channel flow at moderate reynolds numbers: Analysis and wall modeling. 01 2017.<br/></bdi>
