@@ -55,17 +55,12 @@ Loosely speaking, the Froude number quantifies the addition of heat conduction f
 
 Due to the spatial averaging of the DNS output over regions of differing size, the four coarse-z data categories have input and output cubes of different sizes. They are as follows:
 
-\vspace{0.2cm}
-\begin{tabular}{lll}\toprule
-\centering
-Coarse 	& Grid Size & Input / Output Size \\\colrule
- 4 	& (9x9x9)    &  (296, 196, 153)\\
- 8 	& (17x17x17) &  (146, 96, 72)\\
- 16 & (33x33x33) & 	(71, 46, 36)\\
- 24 & (49x49x49) &  (46, 30, 23)\\
-\hline \hline
-\end{tabular}
-
+| Coarse       | Grid-size    | Input / Output Size  |
+| ------------ | ------------ | -------------------- |
+| 4            | (9x9x9)      | (296, 196, 153)      |
+| 8            | (17x17x17)   | (146, 96, 72)        |
+| 16           | (33x33x33)   | (71, 46, 36)         |
+| 24           | (49x49x49)   | (46, 30, 23)         |
 
 #### How to navigate this repository:
 
