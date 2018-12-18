@@ -25,7 +25,7 @@ This project was part of ENGI 4800 - Data Science Capstone at Columbia.
 #### Data Overview
 
 <p align="center">
-<img src="Images/Data_Overview.png" style="display: block; margin: auto;" height="150" width="250" />
+<img src="Images/Data_Overview.png" style="display: block; margin: auto;" height="350" width="550" />
 
 Our datasets consist of 3-dimensional spatial cubes and  were generated using a high resolution DNS with differing initial conditions over a small spatial area. The sub-grid scale DNS output was then used to (1) calculate the model inputs via averaging over regions of differing sizes and (2) calculate the model outputs. With the DNS output being on a sub-grid scale, the spatial averaging was done in order to achieve a good proxy for the generalized input to the model, which will be on a resolved scale. Our goal was then to identify a function that maps input to output, since the true input will be on a resolved scale and will no longer allow us to calculate the output directly (see Fig. 1-a).
 
