@@ -133,7 +133,8 @@ Coarse 	& Grid Size & Input / Output Size \\\colrule
       |              |    |-- Heat
       |              |         |-- Contains predictions of single-output models for heat flux
       |              |         |-- Inputs: base input, differing conditions and differing conditions and time steps
---------------------
+
+--------------------------------
 <sub>[1] J. Smagorinsky. General circulation experiments with the primitive equation. i. the basic experiment. Monthly Weather Review, 91, 1963.<br/></sub>
 <sub>[2] J. B. Deardorff. A numerical study of three-dimensional turbulent channel flow at large reynolds numbers. J. Fluid Mech., 41, 05 1970.<br/></sub>
 <sub>[3]Q. Li, P. Gentine, J. P. Mellado, and K. A. McColl. Implications of nonlocal transport and conditionally averaged statistics on moninobukhov similarity theory and townsends attached eddy hypothesis. Journal of the atmospheric sciences, 75, 10 2018.<br/></sub>
